@@ -21,7 +21,7 @@ app.get("/", (req, res)=>{
 
 
 app.use("/main/auth", userRouter);
-
+app.use("/main/booking", router);
 
 // Swagger setup
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));

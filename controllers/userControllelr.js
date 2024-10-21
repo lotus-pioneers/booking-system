@@ -132,7 +132,7 @@ exports.login=async(req, res)=>{
         if (!user) {
             return res.status(401).json({ message: 'Invalid username' });
         }
-        if(!(await bcrypt.compare(req.body.password, user.password))){
+        if(!(await bcrypt.compare(password, user.password))){
             return res.status(401).json({ message: 'Invalid password' });
         }
         const token = jwt.sign({ userId: user.id }, 'lotus_secret');

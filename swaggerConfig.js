@@ -12,6 +12,10 @@ const swaggerDefinition = {
       url: 'http://localhost:3000/main/auth/',
       description: 'User Development server',
     },
+    {
+      url: 'http://localhost:3000/main/booking/',
+      description: 'User Development server',
+    },
   ],
   components: {
     securitySchemes: {
